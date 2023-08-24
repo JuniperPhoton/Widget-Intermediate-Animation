@@ -17,10 +17,20 @@
 		C450DD4F2A96634700753213 /* AppWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C450DD4E2A96634700753213 /* AppWidgetBundle.swift */; };
 		C450DD512A96634700753213 /* AppWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = C450DD502A96634700753213 /* AppWidget.swift */; };
 		C450DD532A96634800753213 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C450DD522A96634800753213 /* Assets.xcassets */; };
-		C450DD572A96634800753213 /* AppWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = C450DD472A96634700753213 /* AppWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C450DD572A96634800753213 /* AppWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = C450DD472A96634700753213 /* AppWidgetExtension.appex */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		C450DD5E2A96641C00753213 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2238EDEE2A966262006CA6A3 /* Item.swift */; };
 		C450DD612A96651500753213 /* AppModelContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C450DD602A96651500753213 /* AppModelContainer.swift */; };
 		C450DD622A96651500753213 /* AppModelContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C450DD602A96651500753213 /* AppModelContainer.swift */; };
+		C49183F12A9730780064E503 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C450DD492A96634700753213 /* WidgetKit.framework */; };
+		C49183F22A9730780064E503 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C450DD4B2A96634700753213 /* SwiftUI.framework */; };
+		C49183F52A9730780064E503 /* MacWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49183F42A9730780064E503 /* MacWidgetBundle.swift */; };
+		C49183F72A9730780064E503 /* MacWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49183F62A9730780064E503 /* MacWidget.swift */; };
+		C49183F92A9730790064E503 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C49183F82A9730790064E503 /* Assets.xcassets */; };
+		C49183FE2A9730790064E503 /* MacWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = C49183F02A9730780064E503 /* MacWidgetExtension.appex */; platformFilters = (macos, ); settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C49184032A9730C00064E503 /* WidgetShared.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49184022A9730C00064E503 /* WidgetShared.swift */; };
+		C49184042A9730C00064E503 /* WidgetShared.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49184022A9730C00064E503 /* WidgetShared.swift */; };
+		C49184052A9731200064E503 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2238EDEE2A966262006CA6A3 /* Item.swift */; };
+		C49184062A9731440064E503 /* AppModelContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C450DD602A96651500753213 /* AppModelContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +41,13 @@
 			remoteGlobalIDString = C450DD462A96634700753213;
 			remoteInfo = AppWidgetExtension;
 		};
+		C49183FC2A9730790064E503 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2238EDDF2A966262006CA6A3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C49183EF2A9730780064E503;
+			remoteInfo = MacWidgetExtension;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -40,6 +57,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				C49183FE2A9730790064E503 /* MacWidgetExtension.appex in Embed Foundation Extensions */,
 				C450DD572A96634800753213 /* AppWidgetExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
@@ -64,6 +82,13 @@
 		C450DD542A96634800753213 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C450DD5C2A9663A700753213 /* AppWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AppWidgetExtension.entitlements; sourceTree = "<group>"; };
 		C450DD602A96651500753213 /* AppModelContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModelContainer.swift; sourceTree = "<group>"; };
+		C49183F02A9730780064E503 /* MacWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MacWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		C49183F42A9730780064E503 /* MacWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacWidgetBundle.swift; sourceTree = "<group>"; };
+		C49183F62A9730780064E503 /* MacWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacWidget.swift; sourceTree = "<group>"; };
+		C49183F82A9730790064E503 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C49183FA2A9730790064E503 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C49183FB2A9730790064E503 /* MacWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MacWidget.entitlements; sourceTree = "<group>"; };
+		C49184022A9730C00064E503 /* WidgetShared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetShared.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +108,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C49183ED2A9730780064E503 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C49183F22A9730780064E503 /* SwiftUI.framework in Frameworks */,
+				C49183F12A9730780064E503 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -92,6 +126,7 @@
 				C450DD5C2A9663A700753213 /* AppWidgetExtension.entitlements */,
 				2238EDE92A966262006CA6A3 /* WidgetIntermediateAnimation */,
 				C450DD4D2A96634700753213 /* AppWidget */,
+				C49183F32A9730780064E503 /* MacWidget */,
 				C450DD482A96634700753213 /* Frameworks */,
 				2238EDE82A966262006CA6A3 /* Products */,
 			);
@@ -102,6 +137,7 @@
 			children = (
 				2238EDE72A966262006CA6A3 /* WidgetIntermediateAnimation.app */,
 				C450DD472A96634700753213 /* AppWidgetExtension.appex */,
+				C49183F02A9730780064E503 /* MacWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -113,6 +149,7 @@
 				2238EDEC2A966262006CA6A3 /* ContentView.swift */,
 				C450DD602A96651500753213 /* AppModelContainer.swift */,
 				2238EDEE2A966262006CA6A3 /* Item.swift */,
+				C49184022A9730C00064E503 /* WidgetShared.swift */,
 				2238EDF02A966263006CA6A3 /* Assets.xcassets */,
 				2238EDF22A966263006CA6A3 /* WidgetIntermediateAnimation.entitlements */,
 				2238EDF32A966263006CA6A3 /* Preview Content */,
@@ -148,6 +185,18 @@
 			path = AppWidget;
 			sourceTree = "<group>";
 		};
+		C49183F32A9730780064E503 /* MacWidget */ = {
+			isa = PBXGroup;
+			children = (
+				C49183F42A9730780064E503 /* MacWidgetBundle.swift */,
+				C49183F62A9730780064E503 /* MacWidget.swift */,
+				C49183F82A9730790064E503 /* Assets.xcassets */,
+				C49183FA2A9730790064E503 /* Info.plist */,
+				C49183FB2A9730790064E503 /* MacWidget.entitlements */,
+			);
+			path = MacWidget;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -164,6 +213,7 @@
 			);
 			dependencies = (
 				C450DD562A96634800753213 /* PBXTargetDependency */,
+				C49183FD2A9730790064E503 /* PBXTargetDependency */,
 			);
 			name = WidgetIntermediateAnimation;
 			productName = WidgetIntermediateAnimation;
@@ -187,6 +237,23 @@
 			productReference = C450DD472A96634700753213 /* AppWidgetExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		C49183EF2A9730780064E503 /* MacWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C49184012A9730790064E503 /* Build configuration list for PBXNativeTarget "MacWidgetExtension" */;
+			buildPhases = (
+				C49183EC2A9730780064E503 /* Sources */,
+				C49183ED2A9730780064E503 /* Frameworks */,
+				C49183EE2A9730780064E503 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MacWidgetExtension;
+			productName = MacWidgetExtension;
+			productReference = C49183F02A9730780064E503 /* MacWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -201,6 +268,9 @@
 						CreatedOnToolsVersion = 15.0;
 					};
 					C450DD462A96634700753213 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					C49183EF2A9730780064E503 = {
 						CreatedOnToolsVersion = 15.0;
 					};
 				};
@@ -220,6 +290,7 @@
 			targets = (
 				2238EDE62A966262006CA6A3 /* WidgetIntermediateAnimation */,
 				C450DD462A96634700753213 /* AppWidgetExtension */,
+				C49183EF2A9730780064E503 /* MacWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -239,6 +310,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				C450DD532A96634800753213 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C49183EE2A9730780064E503 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C49183F92A9730790064E503 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,8 +341,21 @@
 			files = (
 				C450DD5E2A96641C00753213 /* Item.swift in Sources */,
 				C450DD622A96651500753213 /* AppModelContainer.swift in Sources */,
+				C49184032A9730C00064E503 /* WidgetShared.swift in Sources */,
 				C450DD4F2A96634700753213 /* AppWidgetBundle.swift in Sources */,
 				C450DD512A96634700753213 /* AppWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C49183EC2A9730780064E503 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C49184052A9731200064E503 /* Item.swift in Sources */,
+				C49184062A9731440064E503 /* AppModelContainer.swift in Sources */,
+				C49184042A9730C00064E503 /* WidgetShared.swift in Sources */,
+				C49183F52A9730780064E503 /* MacWidgetBundle.swift in Sources */,
+				C49183F72A9730780064E503 /* MacWidget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,8 +364,17 @@
 /* Begin PBXTargetDependency section */
 		C450DD562A96634800753213 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
+			platformFilter = ios;
 			target = C450DD462A96634700753213 /* AppWidgetExtension */;
 			targetProxy = C450DD552A96634800753213 /* PBXContainerItemProxy */;
+		};
+		C49183FD2A9730790064E503 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilters = (
+				macos,
+			);
+			target = C49183EF2A9730780064E503 /* MacWidgetExtension */;
+			targetProxy = C49183FC2A9730790064E503 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -494,6 +595,10 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -524,10 +629,74 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C49183FF2A9730790064E503 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = MacWidget/MacWidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7GB9CHCB87;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MacWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MacWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.juniperphoton.WidgetIntermediateAnimation.MacWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		C49184002A9730790064E503 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = MacWidget/MacWidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7GB9CHCB87;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MacWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MacWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.juniperphoton.WidgetIntermediateAnimation.MacWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -557,6 +726,15 @@
 			buildConfigurations = (
 				C450DD592A96634800753213 /* Debug */,
 				C450DD5A2A96634800753213 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C49184012A9730790064E503 /* Build configuration list for PBXNativeTarget "MacWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C49183FF2A9730790064E503 /* Debug */,
+				C49184002A9730790064E503 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

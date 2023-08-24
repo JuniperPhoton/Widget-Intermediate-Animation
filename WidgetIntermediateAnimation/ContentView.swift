@@ -10,6 +10,7 @@ import SwiftData
 import WidgetKit
 
 struct ContentView: View {
+    @Environment(\.scenePhase) private var scenePhase
     @Environment(\.modelContext) private var modelContext
     @Query private var items: [Item]
     
@@ -51,8 +52,10 @@ struct ContentView: View {
             Text("Select an item")
         }.onChange(of: items) { _,_ in
             WidgetCenter.shared.reloadAllTimelines()
-        }.onAppear {
-            WidgetCenter.shared.reloadAllTimelines()
+        }.onChange(of: scenePhase) { oldValue, newValue in
+            if newValue == .background {
+                WidgetCenter.shared.reloadAllTimelines()
+            }
         }
     }
     
