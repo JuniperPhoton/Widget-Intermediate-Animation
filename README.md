@@ -7,7 +7,8 @@ This demo is based on the SwiftData demo in Xcode 15. Currently you need Xcode 1
 
 ## Demo time
 
-<img src="https://github.com/JuniperPhoton/WidgetIntermediateAnimation/assets/7578386/32c269ea-339e-49a7-88ac-fe352147b05c" width="300"/>
+![ezgif-1-6ad223da6f](https://github.com/JuniperPhoton/WidgetIntermediateAnimation/assets/7578386/26172940-45ea-4cb2-bcbd-5bfdf2557518)
+
 
 1. Build and install the app
 2. Add a widget in the home screen
