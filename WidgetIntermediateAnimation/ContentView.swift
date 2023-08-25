@@ -12,15 +12,29 @@ import WidgetKit
 struct ContentView: View {
     @Environment(\.scenePhase) private var scenePhase
     @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
+    
+    @Query(sort: [SortDescriptor(\Item.createdDate, order: .reverse)],
+           animation: .default)
+    private var items: [Item]
     
     @State private var inputText = ""
     
     var body: some View {
         NavigationSplitView {
             VStack {
-                TextField("Input text to add", text: $inputText)
-                    .padding()
+                HStack {
+                    TextField("Input text to add", text: $inputText)
+                        .onSubmit {
+                            addItem()
+                        }
+                    
+                    Button(action: addItem) {
+                        Image(systemName: "plus.circle.fill")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 30, height: 30)
+                    }
+                }.padding()
                 
                 List {
                     ForEach(items) { item in
@@ -41,12 +55,15 @@ struct ContentView: View {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     EditButton()
                 }
-#endif
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
+                
+                ToolbarItem(placement: .topBarLeading) {
+                    Button {
+                        deleteAll()
+                    } label: {
+                        Text("Delete all")
                     }
                 }
+#endif
             }
         } detail: {
             Text("Select an item")
@@ -71,13 +88,19 @@ struct ContentView: View {
         WidgetCenter.shared.reloadAllTimelines()
     }
     
+    private func deleteAll() {
+        withAnimation {
+            try? modelContext.delete(model: Item.self)
+        }
+    }
+    
     private func addItem() {
         if inputText.isEmpty {
             return
         }
         
         withAnimation {
-            let newItem = Item(id: UUID().uuidString, text: inputText, completedDate: nil)
+            let newItem = Item(id: UUID().uuidString, text: inputText, createdDate: .now, completedDate: nil)
             modelContext.insert(newItem)
             inputText = ""
         }

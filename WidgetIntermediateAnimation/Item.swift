@@ -12,11 +12,13 @@ import SwiftData
 final class Item {
     var id: String
     var text: String
+    var createdDate: Date?
     var completedDate: Date?
     
-    init(id: String, text: String, completedDate: Date?) {
+    init(id: String, text: String, createdDate: Date?, completedDate: Date?) {
         self.id = id
         self.text = text
+        self.createdDate = createdDate
         self.completedDate = completedDate
     }
 }
